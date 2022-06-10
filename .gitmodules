@@ -1,0 +1,15 @@
+[submodule "hardwaretorch/Displays/slmPy"]
+	path = hardwaretorch/Displays/slmPy
+	url = git@github.com:wavefrontshaping/slmPy.git
+[submodule "holotorch/utils/pytorch_prototyping"]
+	path = holotorch/utils/pytorch_prototyping
+	url = git@github.com:vsitzmann/pytorch_prototyping.git
+[submodule "holotorch/utils/torchinterp1d"]
+	path = holotorch/utils/torchinterp1d
+	url = git@github.com:aliutkus/torchinterp1d.git
+[submodule "holotorch/utils/PyTorchPoly"]
+	path = holotorch/utils/PyTorchPoly
+	url = git@github.com:goroda/PyTorchPoly.git
+[submodule "holotorch/utils/pytorchcolors"]
+	path = holotorch/utils/pytorchcolors
+	url = https://github.com/jorge-pessoa/pytorch-colors
