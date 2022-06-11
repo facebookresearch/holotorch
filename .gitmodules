@@ -10,6 +10,6 @@
 [submodule "holotorch/utils/PyTorchPoly"]
 	path = holotorch/utils/PyTorchPoly
 	url = git@github.com:goroda/PyTorchPoly.git
-[submodule "holotorch/utils/pytorchcolors"]
-	path = holotorch/utils/pytorchcolors
-	url = https://github.com/jorge-pessoa/pytorch-colors
+[submodule "holotorch/utils/pytorch_colors"]
+	path = holotorch/utils/pytorch_colors
+	url = git@github.com:jorge-pessoa/pytorch-colors.git
