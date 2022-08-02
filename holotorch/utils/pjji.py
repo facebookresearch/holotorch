@@ -19,7 +19,10 @@ try:
 except NameError: ij = None
     
 if ij is None:
-    import imagej
+    try:
+        import imagej
+    except:
+        pass
     #ij = imagej.init('sc.fiji:fiji',headless=False)
     #ij = imagej.init(headless=False)
 else:
