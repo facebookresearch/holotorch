@@ -47,10 +47,6 @@ class HoloDataModule(pl.LightningDataModule):
         
         
         super().__init__(
-            train_transforms    = train_transforms,
-            val_transforms      = val_transforms,
-            test_transforms     = test_transforms,
-            dims                = dims
             )
         
 
