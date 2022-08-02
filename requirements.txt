@@ -20,7 +20,6 @@ six
 terminaltables
 tifffile
 torchviz
-wxPython
 opencv-python
 scikit-image
 torchtyping
