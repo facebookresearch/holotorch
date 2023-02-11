@@ -209,7 +209,8 @@ class ASM_Prop(CGH_Component):
 
         if self.prop_kernel_type is ENUM_PROP_KERNEL_TYPE.PARAXIAL_KERNEL:
             # avoid sqrt operation
-            ang = self.z * K_lambda[:,:,None,None] + self.z/(2*K_lambda)*K2 # T x C x H x W
+            #ang = self.z * K_lambda[:,:,None,None] + self.z/(2*K_lambda)*K2 # T x C x H x W
+            ang = self.z * K_lambda + self.z/(2*K_lambda)*K2 # T x C x H x W
         elif self.prop_kernel_type is ENUM_PROP_KERNEL_TYPE.FULL_KERNEL:
             ang = - self.z * torch.sqrt(K_lambda_2 - K2) # T x C x H x W
             if ang.is_complex():

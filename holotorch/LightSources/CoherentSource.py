@@ -53,20 +53,22 @@ class CoherentSource(Source):
         height : int,
         width  : int,
         spacing : float = 8 * um,
-        wavelengths : tuple = [432 * nm, 530 * nm, 630 * nm],
+        wavelengths : list = [432 * nm, 530 * nm, 630 * nm],
     ) -> CoherentSource:
 
+        if type(wavelengths) is not list:
+            wavelengths = [wavelengths]
         # Define the wavelengths
         wavelength_container = WavelengthContainer(
-            wavelengths = [432 * nm, 530 * nm, 630 * nm],
-            tensor_dimension = Dimensions.C(n_channel=3)
+            wavelengths = wavelengths,
+            tensor_dimension = Dimensions.C(n_channel=len(wavelengths))
             # We need to tell the container at which dimension the data should work on
             # This resolves confusion for more complicates tasks (such as partial coherence)
             )
 
         # Define the spacing
         spacing_container = SpacingContainer(
-            spacing = 8 * um
+            spacing = spacing
             )
 
         # The spacing will automatically extend to other dimensions (by default Time,Channel and xy)
@@ -75,8 +77,8 @@ class CoherentSource(Source):
         # Defines the pixel resolution of the source
         source_dim      = Dimensions.CHW(
                 n_channel    = wavelength_container.channel,
-                height       = 1000,
-                width        = 1400,
+                height       = height,
+                width        = width,
             )
 
         source = CoherentSource(

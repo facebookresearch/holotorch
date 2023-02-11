@@ -15,7 +15,7 @@ import torch
 import torch.nn as nn
 
 from holotorch.utils.Dimensions import *
-
+from holotorch.utils.units import *
 class WavelengthContainer(nn.Module):
     
     def __init__(self,
