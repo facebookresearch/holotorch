@@ -11,7 +11,7 @@
 ########################################################
 
 from hardwaretorch.Displays.Display import Display
-import hardwaretorch_dev.slmpy as slmpy
+import slmpy as slmpy
 import numpy as np
 import torch
 
